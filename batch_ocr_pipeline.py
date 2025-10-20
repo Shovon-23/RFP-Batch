@@ -159,7 +159,7 @@ def download_results(output_file_id, save_path="ocr_results.ndjson"):
 # Main Workflow
 # -----------------------------
 def main():
-    input_pdf = "Chatbot Proposal V1.1.pdf"
+    input_pdf = "Draft-Prospectus-of-Brain-Station-23-PLC.pdf"
     print(f"Starting smart OCR for {input_pdf}")
 
     # Split into chunks
@@ -201,11 +201,11 @@ def main():
 
     # Merge all text
     final_output = "\n\n".join(merged_text)
-    with open("final_smart_ocr_output.txt", "w") as f:
+    with open("final_smart_ocr_output.md", "w", encoding="utf-8") as f:
         f.write(final_output)
 
     print("\nSmart OCR completed successfully!")
-    print("Final merged text saved to: final_smart_ocr_output.txt")
+    print("Final merged text saved to: final_smart_ocr_output.md")
 
 
 if __name__ == "__main__":
